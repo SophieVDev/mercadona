@@ -11,6 +11,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-legales.component';
+import { SeConnecterComponent } from './pages/se-connecter/se-connecter.component';
+import { CustomRouterLinkActiveDirective } from './components/header/custom-router-link-active.directive';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-lega
     AboutUsComponent,
     ContactUsComponent,
     MentionsLegalesComponent,
+    SeConnecterComponent,
+    CustomRouterLinkActiveDirective,
   ],
   imports: [
     BrowserModule,

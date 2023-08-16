@@ -1,0 +1,33 @@
+
+@import '/src/themes/themes.scss';
+
+.se-connecter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+        cursor:pointer;
+        padding-bottom: 40px;
+    }
+
+.modal-dialog{
+    h1 {
+        color:$primary-color;
+        font-size: $font-size54;
+        font-weight: bold;
+        padding-left: 55px;
+        padding-bottom: $secondary-padding;
+    }
+        p{
+            padding: 20px 20px 0px 20px;
+            font-weight: bold; 
+            text-align: center;
+        }
+
+    button{
+        background-color: $primary-color;
+        border-color: $primary-color;
+    }
+}
+}

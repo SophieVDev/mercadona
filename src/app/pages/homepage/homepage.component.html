@@ -1,0 +1,15 @@
+<app-header></app-header>
+<div class="product-container">
+        <img src="assets/images/Header_mercadona.jpg" class="img-contact" [routerLink]="['']" style = "width:100%" alt="header_mercadona" title="header de l'entreprise">
+    <div class="product-header-section">
+        <h1 class="title">Nos Promotions : {{headerText}}</h1>
+        <p class="product-description">Profitez des promotions exclusives en cours et économisez sur vos achats préférés. <br>Ne ratez pas cette occasion de faire de bonnes affaires !</p>
+    <div class="category-section">
+        <app-category-menu *ngFor="let menu of menus; let i =index" (menuAction)="handleMenuClick($event, i)" [menu] = "menu"></app-category-menu>
+    </div>
+    </div>
+</div>
+
+
+
+<app-footer></app-footer>

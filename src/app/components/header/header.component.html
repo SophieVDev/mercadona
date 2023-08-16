@@ -1,0 +1,20 @@
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <div class="col-md-3 mb-2 mb-md-0">
+      <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+        <img class="logo" src="assets/images/logo_mercadona.png" alt="logo_mercadona" title="logo de l'entreprise" width="350" height="100">
+      </a>
+    </div>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li><a [routerLink]="['']" class="nav-link px-2" appCustomRouterLinkActive>Vos promotions</a></li>
+      <li><a [routerLink]="['/nous-connaître']" class="nav-link px-2" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">Nous connaître</a></li>
+      <li><a [routerLink]="['/nous-contacter']" class="nav-link px-2" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">Nous contacter</a></li>
+    </ul>
+
+    <div class="col-md-3 ">
+      <button class="btn btn-outline me-2" [routerLink]="['/se-connecter']">Se connecter</button>
+    </div>
+  </header>
+
+    <router-outlet></router-outlet>
+

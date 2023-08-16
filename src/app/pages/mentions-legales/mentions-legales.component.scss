@@ -1,0 +1,29 @@
+@import '/src/themes/themes.scss';
+
+
+  .mentions-legales{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        img{
+            cursor:pointer;
+            padding-bottom: 40px;
+        }
+        h1{
+            color:$primary-color ;
+            font-size: $font-size54;
+            text-align: center;
+            font-weight: bold;
+            padding-top: $secondary-padding;
+            padding-bottom: $secondary-padding;
+        }
+        h3{
+            font-weight: bold; 
+        }
+        p{
+            padding: 0 200px; 
+            font-size: $font-size18;  
+        }  
+
+  }

@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-legales.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
     FooterComponent,
     AboutUsComponent,
     ContactUsComponent,
+    MentionsLegalesComponent,
   ],
   imports: [
     BrowserModule,

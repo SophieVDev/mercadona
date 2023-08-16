@@ -13,9 +13,8 @@
     .product-header-section{
         text-align: center;
         width: 70%;
-        .title{
+        .title, h2{
             color:$primary-color ;
-            font-size: $font-size54;
             text-align: center;
             font-weight: bold;
             padding-top: $secondary-padding;
@@ -25,7 +24,7 @@
             font-size: $font-size22;
             color: $blackish-color;
             font-weight: bold;
-            padding-bottom: $secondary-padding;
+      
         }
         .category-section{
             display: flex;
@@ -34,7 +33,8 @@
             column-gap: $secondary-padding;
             padding-bottom: $secondary-padding;
         }
+
     }
 }
 
-   
+  

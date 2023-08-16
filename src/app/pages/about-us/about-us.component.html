@@ -1,0 +1,60 @@
+<app-header></app-header>
+  
+<main class="about-container">
+    <img src="assets/images/header-2.jpg" class="img-contact" [routerLink]="['']" style = "width:100%" alt="header_mercadona" title="header de l'entreprise">
+<div>
+      
+      <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="assets/images/logo_mercadona.png" alt="logo" >
+            <h1 class="display-5 fw-bold text-body-emphasis">Notre concept</h1>
+                <div class="col-lg-6 mx-auto">
+                    <p class="lead mb-4">Mercadona, entreprise familiale, occupe une place de choix parmi les principales chaînes de supermarchés physiques et de commerce en ligne. Notre objectif est de vous orienter en vous offrant la meilleure option pour satisfaire vos besoins alimentaires, d'entretien et soins du corps. C'est ainsi que 5,7 millions de foyers placent leur confiance en l'entreprise chaque jour.</p>
+                        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                            <button type="button" class="btn btn-success btn-lg px-4 gap-3" [routerLink]="['']">Vos promotions</button>
+                            <button type="button" class="btn btn-outline-secondary btn-lg px-4"[routerLink]="['/nous-contacter']">Nous contacter</button>
+                        </div>
+                </div>
+      </div>
+
+
+            <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+                <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                    <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Alimentation</h1>
+                    <p class="lead">Découvrez toutes nos promotions alimentaires pour rendre vos plats savoureux ! Nous offres promotionnlles sont des produits qui garantissent une qualité et une fraîcheur maximales. Faites plaisir à vos papilles !</p>
+                </div>
+                <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                    <img class="rounded-lg-3" src="assets/images/cuisine.jpg" alt="" width="720">
+                </div>
+            </div>
+
+
+
+                    <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+                        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                            <img class="rounded-lg-3" src="assets/images/cosmetique.jpg" alt="" width="720">
+                        </div>
+                            <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                            <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Cosmetique</h1>
+                            <p class="lead">Tout ce qu'il vous faut pour prendre soin de vous et de vos proches : découvrez nos promotions liés à nos parfums, produits de soins pour bébés, cosmétiques et produits de beauté. Offrez-vous du bien-être !</p>
+                        </div>       
+                    </div>
+
+
+                                <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+                                    <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                                        <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Maison</h1>
+                                        <p class="lead">Ici, vous découvrirez tout le offres nécessaire pour prendre soin de votre maison au quotidien : des produits de nettoyage et d'entretien pour votre domicile et vos vêtements, garantissant une qualité et une efficacité inégalées. Bienvenue chez vous !</p>
+                                    </div>
+                                        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+                                            <img class="rounded-lg-3" src="assets/images/maison.jpg" alt="" width="720">
+                                        </div>
+                                </div>
+
+</div>
+</main>
+  
+    <!-- FOOTER -->
+    <app-footer></app-footer>
+
+    <router-outlet></router-outlet>
+

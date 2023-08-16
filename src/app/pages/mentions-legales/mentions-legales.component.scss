@@ -26,4 +26,12 @@
             font-size: $font-size18;  
         }  
 
+        @media (max-width: 576px) {
+            p {
+              padding: 0; /* Supprime le padding pour les écrans de 576px ou moins */
+              text-align: center;
+
+            }
+        }
+
   }

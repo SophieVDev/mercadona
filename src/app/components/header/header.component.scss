@@ -5,6 +5,7 @@
         .nav-link{
             color: $blackish-color;
             font-weight: bold;
+            font-size: $font-size18;
         }
 
         .nav-link.active {
@@ -13,11 +14,8 @@
         }
     }
 
-
-        
-
-button{
-    background-color: $primary-color;
-    color: $secondary-color;
-    border-color: $primary-color;
-}
+    button{
+        background-color: $primary-color;
+        color: $secondary-color;
+        border-color: $primary-color;
+    }

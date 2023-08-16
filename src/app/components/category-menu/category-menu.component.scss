@@ -1,0 +1,19 @@
+@import '/src/themes/themes.scss';
+
+.category-menu-container {
+    padding: $main-padding $secondary-padding;
+    background: $white-color;
+    width: fit-content;
+    color: $blackish-color;
+    border: 1px solid $secondary-color;
+    box-shadow: $box-shadow;
+    font-size: $font-size16;
+
+    &:hover{
+        cursor: pointer;
+        border-color: $primary-color;
+        color: $primary-color;
+        transform: translateY(5px);
+        transition: 1s all;
+}
+}

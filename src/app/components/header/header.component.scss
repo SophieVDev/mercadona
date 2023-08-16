@@ -1,0 +1,23 @@
+@import '/src/themes/themes.scss';
+
+
+.nav {
+        .nav-link{
+            color: $blackish-color;
+            font-weight: bold;
+        }
+
+        .nav-link.active {
+            color: $primary-color !important;
+            font-weight: bold;
+        }
+    }
+
+
+        
+
+button{
+    background-color: $primary-color;
+    color: $secondary-color;
+    border-color: $primary-color;
+}

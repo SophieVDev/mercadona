@@ -13,6 +13,7 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-legales.component';
 import { SeConnecterComponent } from './pages/se-connecter/se-connecter.component';
 import { CustomRouterLinkActiveDirective } from './components/header/custom-router-link-active.directive';
+import { EmailMerciComponent } from './pages/email-merci/email-merci.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { CustomRouterLinkActiveDirective } from './components/header/custom-rout
     MentionsLegalesComponent,
     SeConnecterComponent,
     CustomRouterLinkActiveDirective,
+    EmailMerciComponent,
   ],
   imports: [
     BrowserModule,

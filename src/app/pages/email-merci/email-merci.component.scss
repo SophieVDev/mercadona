@@ -1,7 +1,6 @@
 @import '/src/themes/themes.scss';
 
-
-.contact-container{
+.product-container{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -10,7 +9,8 @@
         cursor:pointer;
     }
 
-    .contact-section{
+
+    .product-header-section{
         text-align: center;
         width: 70%;
         h1{
@@ -19,19 +19,15 @@
             font-weight: bold;
             padding-top: $secondary-padding;
             padding-bottom: $secondary-padding;
+            font-size: $font-size22;
         }
-    }
-    .form-contact{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-weight: bold;
 
-        .Message{
-            height: 150px;
-        }
     }
- 
 }
 
+button{
+    color: $white-color;
+    background-color: $primary-color;
+    border-color: $primary-color;
+    font-weight: bold;
+}

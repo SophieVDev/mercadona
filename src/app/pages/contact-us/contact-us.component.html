@@ -8,26 +8,25 @@
                                 <h1>Contactez-nous</h1>                                
                                     <div class="modal-body p-5 pt-0">
 
-                                        <form class="form-contact" action="traiter_formulaire.php" method="post">
+                                        <form action="https://formsubmit.co/svercoutter@gmail.com" method="POST">
                                             <div class="form-floating mb-3 w-100">
-                                                <input type="text" class="form-control rounded-3" id="nom" placeholder="nom" required>
+                                                <input type="text" class="form-control rounded-3" name="name" placeholder="name" required>
                                                 <label for="message">Nom et Prénom :  </label>
                                             </div>
 
                                             <div class="form-floating mb-3 w-100 ">
-                                                <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com" required>
+                                                <input type="email" class="form-control rounded-3" name="email" placeholder="Email Adress" required>
                                                 <label for="floatingInput">Email :  </label>
+                                                <input type="hidden" name="_next" value="http://localhost:4200/email-envoye">
+                                                <input type="hidden" name="_captcha" value="false">
                                             </div>
 
                                             <div class="form-floating mb-3 w-100 " id="Message">
-                                                <textarea type="message" class="Message form-control rounded-3" id="message" placeholder="text" required></textarea>
+                                                <textarea type="text" class="Message form-control rounded-3" name="message" placeholder="text" required></textarea>
                                                 <label for="floatingInput">Message :  </label>
                                             </div>
-                                        
                                             <button class=" mb-2 btn btn-lg rounded-3 btn-success" type="submit">Envoyer</button>
-                                        
-                                        
-                                        </form>
+                                      </form>
                                     </div>
                             </div>
                         </div>

@@ -14,6 +14,9 @@ import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-lega
 import { SeConnecterComponent } from './pages/se-connecter/se-connecter.component';
 import { CustomRouterLinkActiveDirective } from './components/header/custom-router-link-active.directive';
 import { EmailMerciComponent } from './pages/email-merci/email-merci.component';
+import { ProduitsComponent } from './pages/produits/produits.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -28,13 +31,17 @@ import { EmailMerciComponent } from './pages/email-merci/email-merci.component';
     SeConnecterComponent,
     CustomRouterLinkActiveDirective,
     EmailMerciComponent,
+    ProduitsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([]),
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

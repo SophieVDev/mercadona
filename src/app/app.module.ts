@@ -11,11 +11,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { MentionsLegalesComponent } from './pages/mentions-legales/mentions-legales.component';
-import { SeConnecterComponent } from './pages/se-connecter/se-connecter.component';
 import { CustomRouterLinkActiveDirective } from './components/header/custom-router-link-active.directive';
 import { EmailMerciComponent } from './pages/email-merci/email-merci.component';
 import { ProduitsComponent } from './pages/produits/produits.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './pages/login/login.component';
+import { FilterByCategoryPipe } from './pipe/filter.pipe';
 
 
 @NgModule({
@@ -28,10 +29,11 @@ import { HttpClientModule } from '@angular/common/http';
     AboutUsComponent,
     ContactUsComponent,
     MentionsLegalesComponent,
-    SeConnecterComponent,
     CustomRouterLinkActiveDirective,
     EmailMerciComponent,
     ProduitsComponent,
+    LoginComponent,
+    FilterByCategoryPipe,
   ],
   imports: [
     BrowserModule,

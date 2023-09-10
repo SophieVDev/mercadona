@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProduitService } from 'src/app/service/produit.service';
 
 @Component({
   selector: 'app-homepage',
@@ -6,40 +7,44 @@ import { Component } from '@angular/core';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent {
+  selectedCategory: string | null = null;
 
-  constructor(){}
+  products: any[] = [];
+
+  constructor(private produitService: ProduitService) {}
+
+  getProductsByCategorie(categorie: string) {
+    this.produitService.getProductsByCategorie(categorie).subscribe((products) => {
+      // Traitez les produits récupérés, par exemple, stockez-les dans une variable du composant pour les afficher dans le template.
+      this.products=products
+    });
+}
 headerText: string=""
   menus : any = [{
     id :1,
     name:"Alimentation",
+    categoryId: "alimentation",
     active:false
   },
   {
     id :2,
     name:"Cosmétique",
+    categoryId: "cosmetique",
     active:false
   },
   {
     id :3,
     name:"Maison",
+    categoryId: "maison",
     active:false
   },
 ]
   ngOnInit(): void {
       
   }
-  handleMenuClick($event : any,index:number){
-    console.log($event)
+  
 
-    //Désactive le menu actif lorsque l'on clique sur un autre onglet(couleur verte disparait)
-    for(let menu of this.menus){
-      menu.active = false
-    }
-    
-    this.menus[index].active =true;
-    this.headerText = $event.name
-
-  }
+  
 
 }
 

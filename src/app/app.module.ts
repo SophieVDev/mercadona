@@ -16,7 +16,8 @@ import { EmailMerciComponent } from './pages/email-merci/email-merci.component';
 import { ProduitsComponent } from './pages/produits/produits.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './pages/login/login.component';
-import { FilterByCategoryPipe } from './pipe/filter.pipe';
+import { CategoryFilterPipe } from './pipe/filter.pipe';
+
 
 
 @NgModule({
@@ -33,7 +34,7 @@ import { FilterByCategoryPipe } from './pipe/filter.pipe';
     EmailMerciComponent,
     ProduitsComponent,
     LoginComponent,
-    FilterByCategoryPipe,
+    CategoryFilterPipe,
   ],
   imports: [
     BrowserModule,

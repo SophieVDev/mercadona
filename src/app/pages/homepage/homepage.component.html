@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="product-container">
-        <img src="assets/images/Header_mercadona.jpg" class="img-contact" [routerLink]="['']" style = "width:100%" alt="header_mercadona" title="header de l'entreprise">
+        <img src="assets/images/header/header1.jpg" class="img-contact" [routerLink]="['/produits']" style = "width:100%" alt="header_mercadona" title="header de l'entreprise">
     <div class="product-header-section">
         <h1 class="title">Nos Promotions : </h1>
         <p class="product-description">Profitez des promotions exclusives en cours et économisez sur vos achats préférés. <br>Ne ratez pas cette occasion de faire de bonnes affaires !</p>
@@ -11,33 +11,70 @@
 
     </div>
 
+
+
+    <h1>Liste des produits</h1>
+    
+    <!-- Boutons de filtrage -->
+    <button class="category-button" data-category="Maison">Maison</button>
+    <button class="category-button" data-category="Alimentaire">Alimentaire</button>
+    <button class="category-button" data-category="Cosmetique">Cosmetique</button>
+
+    <!-- Liste des produits -->
+    <ul id="product-list">
+        <li data-category="Maison">Produit de Maison 1</li>
+        <li data-category="Alimentaire">Produit Alimentaire 1</li>
+        <li data-category="Cosmetique">Produit Cosmetique 1</li>
+        <li data-category="Maison">Produit de Maison 2</li>
+        <li data-category="Alimentaire">Produit Alimentaire 2</li>
+        <li data-category="Cosmetique">Produit Cosmetique 2</li>
+    </ul>
+
+    <script>
+        // Fonction pour afficher/masquer les produits en fonction de la catégorie
+        function filterProducts(category) {
+            const productList = document.querySelectorAll('#product-list li');
+            productList.forEach(product => {
+                const productCategory = product.getAttribute('data-category');
+                if (category === 'Tous' || category === productCategory) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+
+        // Écouteurs d'événements pour les boutons de filtrage
+        const categoryButtons = document.querySelectorAll('.category-button');
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category');
+                filterProducts(category);
+            });
+        });
+
+        // Afficher tous les produits au chargement de la page
+        filterProducts('Tous');
+    </script>
+<!--
     <div>
-        <button class="category-button"(click)="getProductsByCategorie('Alimentation')">Alimentation</button>
-        <button class="category-button" (click)="getProductsByCategorie('Cosmétique')">Cosmétique</button>
-        <button class="category-button" (click)="getProductsByCategorie('Maison')">Maison</button>
+        <button class="category-button" (click)="getProductsByCategory('Maison')">Maison</button>
+        <button class="category-button" (click)="getProductsByCategory('Cosmetique')">Cosmetique</button>
       </div>
 </div>
 <div class="product-container">
     <div class="album py-5 bg-body-tertiary">
       <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <div class="col" *ngFor="let product of products">
+        <div class="row">
+          <div class="col-md-4" *ngFor="let product of products">
             <div class="card shadow-sm">
               <img [src]="product.photoUrl" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Product Image">
               <div class="card-body">
-                <h1 class="card-text">{{ product.nom }}</h1>
+                <h3 class="card-text">{{ product.nom }}</h3>
                 <p class="card-text">{{ product.description }}</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <h4>Prix : {{ product.prix }} €</h4>
-                  </div>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <h3 class="success">Promotion : {{ product.promo }} €</h3>
-                    </div>
-                    <small class="text-body-secondary">Date limite : {{ product.expirationDate }}</small>
-                  </div>
-                </div>
+                <h6 class="card-text">Prix : {{ product.prix }} €</h6>
+                <h4 class="card-text text-success">Promotion : {{ product.promo}} €</h4>
+                <small class="card-text">Date limite : {{ product.expirationDate}}</small>
               </div>
             </div>
           </div>
@@ -45,6 +82,6 @@
       </div>
     </div>
   </div>
-
+-->
 
 <app-footer></app-footer>

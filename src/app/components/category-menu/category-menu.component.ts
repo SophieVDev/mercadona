@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output,OnInit } from '@angular/core';
-import { ProduitService } from 'src/app/service/produit.service';
+
 
 @Component({
   selector: 'app-category-menu',
@@ -22,14 +22,4 @@ export class CategoryMenuComponent implements OnInit {
     this.menuAction.emit(this.menu);
   }
 
-
-  products: any[] = [];
-
-  constructor(private produitService: ProduitService) {}
-
-  getProduitsByCategorie(categorie: string) {
-    this.produitService.getProductsByCategorie(categorie).subscribe((products) => {
-      this.products = products;
-    });
-  }
 }

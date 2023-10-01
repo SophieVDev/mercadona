@@ -1,10 +1,15 @@
 <app-header></app-header>
+
+
+
+
+
+
 <div class="product-container">
         <img src="assets/images/header/header1.jpg" class="img-contact" [routerLink]="['/produits']" style = "width:100%" alt="header_mercadona" title="header de l'entreprise">
     <div class="product-header-section">
         <h1 class="title">Nos Promotions : </h1>
         <p class="product-description">Profitez des promotions exclusives en cours et économisez sur vos achats préférés. <br>Ne ratez pas cette occasion de faire de bonnes affaires !</p>
-        <p class="product-description">Pour y acceder cliquer sur un des boutons ci-dessous :</p>
         <br>
         <img src="assets/images/main.png" class="main" alt="main" width="100px">
 
@@ -12,50 +17,42 @@
     </div>
 
 
+    <h1>Liste des produits en promotion ! </h1>
 
-    <h1>Liste des produits</h1>
+
+
+
+
+
+
+    <div class="album py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col" *ngFor="let products of produitsEnPromotion">
+            <div class="card shadow-sm">
+              <img th:src="@{'/' + ${products.imagePath}}" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Image du produit">
+              <div class="card-body">
+                <h1 class="card-text">{{ products.nom }}</h1>
+                <p class="card-text">{{ products.description }}</p>
+                <h4>Prix : {{ products.prix }} € </h4>
+                <h4 class="text-success">Promotion : {{ products.prix - products.prix * products.promotion / 100 }} €</h4> 
+                <h6>date limite : {{products.expirationDate }} </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     
-    <!-- Boutons de filtrage -->
-    <button class="category-button" data-category="Maison">Maison</button>
-    <button class="category-button" data-category="Alimentaire">Alimentaire</button>
-    <button class="category-button" data-category="Cosmetique">Cosmetique</button>
 
-    <!-- Liste des produits -->
-    <ul id="product-list">
-        <li data-category="Maison">Produit de Maison 1</li>
-        <li data-category="Alimentaire">Produit Alimentaire 1</li>
-        <li data-category="Cosmetique">Produit Cosmetique 1</li>
-        <li data-category="Maison">Produit de Maison 2</li>
-        <li data-category="Alimentaire">Produit Alimentaire 2</li>
-        <li data-category="Cosmetique">Produit Cosmetique 2</li>
-    </ul>
 
-    <script>
-        // Fonction pour afficher/masquer les produits en fonction de la catégorie
-        function filterProducts(category) {
-            const productList = document.querySelectorAll('#product-list li');
-            productList.forEach(product => {
-                const productCategory = product.getAttribute('data-category');
-                if (category === 'Tous' || category === productCategory) {
-                    product.style.display = 'block';
-                } else {
-                    product.style.display = 'none';
-                }
-            });
-        }
+  
+    
+    
+    
+    
 
-        // Écouteurs d'événements pour les boutons de filtrage
-        const categoryButtons = document.querySelectorAll('.category-button');
-        categoryButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const category = button.getAttribute('data-category');
-                filterProducts(category);
-            });
-        });
 
-        // Afficher tous les produits au chargement de la page
-        filterProducts('Tous');
-    </script>
 <!--
     <div>
         <button class="category-button" (click)="getProductsByCategory('Maison')">Maison</button>
@@ -83,5 +80,12 @@
     </div>
   </div>
 -->
-
+<div *ngIf="!hasRgpdConsent" class="rgpd-alert">
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    Nous utilisons des cookies pour améliorer votre expérience sur notre site. En continuant à naviguer, vous acceptez notre utilisation des cookies.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="giveRgpdConsent()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
 <app-footer></app-footer>

@@ -1,78 +1,46 @@
+
+
 <app-header></app-header>
 <body>
 <div class="product-container">
-        <img src="assets/images/header/header1.jpg" class="img-contact" [routerLink]="['/produits']" style = "width:100%" alt="header_mercadona" title="header de l'entreprise">
+        <img src="assets/images/header/mercadonapromo.jpg" class="img-contact" [routerLink]="['/']" style = "width:100%" alt="header_mercadona" title="header de l'entreprise">
 
 
 
-<!-- À l'emplacement où vous souhaitez afficher les fiches produits et le filtre par catégorie -->
-<div class="album py-5 bg-body-tertiary">
-  <div class="container">
-    <h4>Filtrez en fonction des catégories</h4>
 
-    <!-- Boutons de filtrage -->
-    <button type="button" class="btn btn-outline me-2" style="border-color: green;" (click)="filterProductsByCategory('Toutes les catégories')">Toutes les catégories</button>
-    <button *ngFor="let categories of categories" type="button" class="btn btn-outline me-2" style="border-color: green;" (click)="filterProductsByCategory(categories)">{{ categories }}</button>
-
-    <!-- Bouton de filtrage spécifique pour la catégorie "Maison" -->
-    <button type="button" class="btn btn-outline me-2" style="border-color: green;" (click)="filterProductsByCategory('Maison')">Maison</button>
-
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <div class="col" *ngFor="let products of products | categoryFilter:selectedCategory">
-        <div class="card shadow-sm">
-          <img th:src="@{'/' + ${products.imagePath}}" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Image du produit">
-          <img [src]="'data:image/jpeg;base64,' + products.photoUrl" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Product Image">
-          <div class="card-body">
-            <h1 class="card-text">{{ products.nom }}</h1>
-            <p class="card-text">{{ products.description }}</p>
-            <h4>Prix : {{ products.prix }} € </h4>
-            <h4 class="text-success">Promotions : {{ products.promotion }} € </h4>
-            <h6>date limite : {{products.exprirationDate}} </h6>
+        <!-- Afficher les produits de la catégorie "Maison, Alimentaire, Cosmétique et tous les produits" -->
+        <div class="album py-5 bg-body-tertiary">
+          <div class="container">
+            
+        <!--FILTRE-->
+        <div class="text-center">
+          <button (click)="afficherProduitsMaison()" class="btn btn-success bouton-personnalise">Maison</button>
+          <button (click)="afficherProduitsCosmetique()" class="btn btn-success bouton-personnalise">Cosmétique</button>
+          <button (click)="afficherProduitsAliementaire()" class="btn btn-success bouton-personnalise">Alimentaire</button>
+          <button (click)="afficherProduits()" class="btn btn-success bouton-personnalise">Tous les produits</button>
+        </div>
+            
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+              
+              <div class="col" *ngFor="let product of produitsFiltre">
+                
+                  <div class="card shadow-sm">
+                    <img type="file" th:src="@{'/' + ${product.imagePath}}" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Image du produit" accept="image/png, image/jpg">
+                    <div class="card-body">
+                      <h1 class="card-text">{{ product.nom }}</h1>
+                      <p class="card-text">{{ product.description }}</p>
+                      <h4>Prix : {{ product.prix }} € </h4>
+                      <h4 class="text-danger"style="font-weight: bold;">Prix remisé : {{ product.prix - product.prix * product.promotion / 100 }} €</h4> 
+                      <h6>date limite : {{ product.expirationDate }} </h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
-
-
-
-
-
-
-
- <!--       <div class="album py-5 bg-body-tertiary">
-          <div class="container">
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div class="col" *ngFor="let products of products">
-                  <div class="card shadow-sm">
-                    <img [src]=products.photoUrl class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Product Image">
-                    <div class="card-body">
-                      <h1 class="card-text">{{ products.nom}}</h1>
-                      <p class="card-text">{{ products.description }}</p>
-                          <h4>Prix : {{ products.prix }} € </h4>
-                          <h4 class="text-success">Promotions : {{ products.promotion }} € </h4>
-                          <h6>date limite : {{ products.exprirationDate }} </h6>
-                        </div>
-                      </div>
-                    </div>                    
-                  </div>                  
-                </div>                                
-              </div>  -->            
-      
-
-            </div>-->
-
-
-
-
-
-            <br>
-<br>
-
-    
 </body>
 
 <app-footer></app-footer>

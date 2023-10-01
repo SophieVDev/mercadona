@@ -5,8 +5,11 @@ export interface Products {
     prix: number;
     promotion:number;
     photoUrl : string;
-    exprirationDate: string;
-    categories_id: number;
-    imagePath:string;
+    expirationDate: string;
+    categories: {
+      id: number,
+      name: string,
+    };
+    image:null,
   
   }

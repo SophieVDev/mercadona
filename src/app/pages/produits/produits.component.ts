@@ -22,7 +22,7 @@ export class ProduitsComponent implements OnInit {
     this.fetchData();
   }
 
-  private fetchData() {
+  public fetchData() {
     this.productsService.getProducts().subscribe(
       (response) => {
         this.products = response;

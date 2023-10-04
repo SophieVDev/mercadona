@@ -1,30 +1,15 @@
 <app-header></app-header>
 
-
-
-
-
-
 <div class="product-container">
-        <img src="assets/images/header/header1.jpg" class="img-contact" [routerLink]="['/produits']" style = "width:100%" alt="header_mercadona" title="header de l'entreprise">
+  <img src="assets/images/header/header1.jpg" class="img-contact" [routerLink]="['/produits']" style = "width:100%" alt="header_mercadona" title="header de l'entreprise">
     <div class="product-header-section">
         <h1 class="title">Nos Promotions : </h1>
         <p class="product-description">Profitez des promotions exclusives en cours et économisez sur vos achats préférés. <br>Ne ratez pas cette occasion de faire de bonnes affaires !</p>
         <br>
         <img src="assets/images/main.png" class="main" alt="main" width="100px">
-
-
-    </div>
-
+</div>
 
     <h1>Liste des produits en promotion ! </h1>
-
-
-
-
-
-
-
     <div class="album py-5 bg-body-tertiary">
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -43,49 +28,14 @@
         </div>
       </div>
     </div>
-    
 
 
-  
-    
-    
-    
-    
-
-
-<!--
-    <div>
-        <button class="category-button" (click)="getProductsByCategory('Maison')">Maison</button>
-        <button class="category-button" (click)="getProductsByCategory('Cosmetique')">Cosmetique</button>
-      </div>
-</div>
-<div class="product-container">
-    <div class="album py-5 bg-body-tertiary">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4" *ngFor="let product of products">
-            <div class="card shadow-sm">
-              <img [src]="product.photoUrl" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Product Image">
-              <div class="card-body">
-                <h3 class="card-text">{{ product.nom }}</h3>
-                <p class="card-text">{{ product.description }}</p>
-                <h6 class="card-text">Prix : {{ product.prix }} €</h6>
-                <h4 class="card-text text-success">Promotion : {{ product.promo}} €</h4>
-                <small class="card-text">Date limite : {{ product.expirationDate}}</small>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div *ngIf="!hasRgpdConsent" class="rgpd-alert">
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        Nous utilisons des cookies pour améliorer votre expérience sur notre site. En continuant à naviguer, vous acceptez notre utilisation des cookies.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="giveRgpdConsent()">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
     </div>
-  </div>
--->
-<div *ngIf="!hasRgpdConsent" class="rgpd-alert">
-  <div class="alert alert-warning alert-dismissible fade show" role="alert">
-    Nous utilisons des cookies pour améliorer votre expérience sur notre site. En continuant à naviguer, vous acceptez notre utilisation des cookies.
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="giveRgpdConsent()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-</div>
 <app-footer></app-footer>

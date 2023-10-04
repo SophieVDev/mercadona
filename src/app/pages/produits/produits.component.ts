@@ -43,6 +43,13 @@ export class ProduitsComponent implements OnInit {
     );
   }
 
+  afficherProduitsCosmetique() {
+    // Filtrer les produits par catégorie "Cosmetique" (ID 2)
+    this.produitsFiltre = this.products.filter(
+      (product) => product.categories.id === 2
+    );
+  }
+
   afficherProduitsAliementaire() {
     // Filtrer les produits par catégorie "Aliementaire" (ID 3)
     this.produitsFiltre = this.products.filter(
@@ -50,12 +57,6 @@ export class ProduitsComponent implements OnInit {
     );
   }
 
-  afficherProduitsCosmetique() {
-    // Filtrer les produits par catégorie "Cosmetique" (ID 2)
-    this.produitsFiltre = this.products.filter(
-      (product) => product.categories.id === 2
-    );
-  }
 
   afficherProduits() {
     // Filtrer les produits par catégories ayant les ID 1, 2 ou 3

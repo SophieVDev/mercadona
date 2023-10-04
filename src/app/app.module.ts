@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CategoryMenuComponent } from './components/category-menu/category-menu.component';
@@ -17,7 +16,6 @@ import { ProduitsComponent } from './pages/produits/produits.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
-import { RgpdAlertComponentComponent } from './components/rgpd-alert-component/rgpd-alert-component.component'; 
 
 
 
@@ -35,7 +33,6 @@ import { RgpdAlertComponentComponent } from './components/rgpd-alert-component/r
     EmailMerciComponent,
     ProduitsComponent,
     LoginComponent,
-    RgpdAlertComponentComponent,
   ],
   imports: [
     BrowserModule,

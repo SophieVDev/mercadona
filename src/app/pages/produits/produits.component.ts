@@ -8,10 +8,11 @@ import { Products } from './modele';
   styleUrls: ['./produits.component.scss']
 })
 
+
 export class ProduitsComponent implements OnInit {
+
   products: Products[] = [];
-  categories: string[] = [];
-  selectedCategory: string = 'Toutes les catégories'; // Mettez à jour le nom de la variable
+  produitsFiltre: Products[] = [];
 
   
 
@@ -25,7 +26,7 @@ export class ProduitsComponent implements OnInit {
     this.productsService.getProducts().subscribe(
       (response) => {
         this.products = response;
-        this.extractUniqueCategories();
+        this.produitsFiltre = this.products;
       },
       (error) => {
         console.error("Erreur lors de la requête de produits :", error);
@@ -33,38 +34,35 @@ export class ProduitsComponent implements OnInit {
     );
   }
 
-  private extractUniqueCategories() {
-    this.categories = Array.from(new Set(this.products.map(products => products.categories_id.toString())));
-    this.categories.unshift('Toutes les catégories');
+  //FILTRE PAR CATEGORIE//
+
+  afficherProduitsMaison() {
+    // Filtrer les produits par catégorie "Maison" (ID 1)
+    this.produitsFiltre = this.products.filter(
+      (product) => product.categories.id === 1
+    );
   }
 
-  filterProductsByCategory(categories: string): void {
-    this.selectedCategory = categories;
+  afficherProduitsAliementaire() {
+    // Filtrer les produits par catégorie "Aliementaire" (ID 3)
+    this.produitsFiltre = this.products.filter(
+      (product) => product.categories.id === 3
+    );
   }
 
+  afficherProduitsCosmetique() {
+    // Filtrer les produits par catégorie "Cosmetique" (ID 2)
+    this.produitsFiltre = this.products.filter(
+      (product) => product.categories.id === 2
+    );
+  }
+
+  afficherProduits() {
+    // Filtrer les produits par catégories ayant les ID 1, 2 ou 3
+    this.produitsFiltre = this.products.filter(
+      (product) => [1, 2, 3].includes(product.categories.id)
+    );
+  }
 }
 
 
-
-/*export class ProduitsComponent implements OnInit {
-  products: Products[] = [];
-
-  constructor(private productsService: ProductsService) {}
-
-  ngOnInit() {
-    this.fetchData();
-  }
-
-  private fetchData() {
-    this.productsService.getProducts().subscribe(
-      (response) => {
-        this.products = response;
-      },
-      (error) => {
-        console.error("Erreur lors de la requête de produits :", error);
-      }
-    );
-  }
-
-  
-}*/

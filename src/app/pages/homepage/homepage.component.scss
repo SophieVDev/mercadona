@@ -56,4 +56,20 @@
 }
 }
 
+/* Ajoutez ces styles pour l'alerte RGPD */
+.rgpd-alert {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff; /* Couleur du texte blanc */
+    text-align: center; /* Centrage du texte */
+    z-index: 1000;
+  }
+
+  .alert{
+    background-color: green; /* Couleur de fond verte */
+    color: #fff; /* Couleur du texte blanc */
+  }
   
+
+

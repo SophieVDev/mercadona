@@ -16,7 +16,8 @@ import { EmailMerciComponent } from './pages/email-merci/email-merci.component';
 import { ProduitsComponent } from './pages/produits/produits.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './pages/login/login.component';
-import { CategoryFilterPipe } from './pipe/filter.pipe';
+import { FormsModule } from '@angular/forms';
+import { RgpdAlertComponentComponent } from './components/rgpd-alert-component/rgpd-alert-component.component'; 
 
 
 
@@ -34,17 +35,16 @@ import { CategoryFilterPipe } from './pipe/filter.pipe';
     EmailMerciComponent,
     ProduitsComponent,
     LoginComponent,
-    CategoryFilterPipe,
+    RgpdAlertComponentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([]),
     HttpClientModule,
+    FormsModule,
   ],
-  providers: [
-
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

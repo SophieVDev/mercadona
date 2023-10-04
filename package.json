@@ -1,6 +1,7 @@
 {
   "name": "mercadona",
   "version": "0.0.0",
+
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,10 +9,13 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
+ 
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.1.0",
     "@angular/common": "^16.1.0",
+    "@angular/cli": "~16.1.6",
+    "@angular/compiler-cli": "^16.1.0",
     "@angular/compiler": "^16.1.0",
     "@angular/core": "^16.1.0",
     "@angular/forms": "^16.1.0",

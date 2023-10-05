@@ -14,7 +14,6 @@ import { CustomRouterLinkActiveDirective } from './components/header/custom-rout
 import { EmailMerciComponent } from './pages/email-merci/email-merci.component';
 import { ProduitsComponent } from './pages/produits/produits.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
 
 
@@ -32,7 +31,6 @@ import { FormsModule } from '@angular/forms';
     CustomRouterLinkActiveDirective,
     EmailMerciComponent,
     ProduitsComponent,
-    LoginComponent,
   ],
   imports: [
     BrowserModule,

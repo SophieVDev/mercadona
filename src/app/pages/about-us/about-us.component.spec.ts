@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AboutUsComponent } from './about-us.component';
+import { HeaderComponent } from '../../components/header/header.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 import { FakeHeaderComponent } from './fake-header.component';
 
 describe('AboutUsComponent', () => {
@@ -8,7 +10,7 @@ describe('AboutUsComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AboutUsComponent,FakeHeaderComponent]
+      declarations: [AboutUsComponent,FakeHeaderComponent, HeaderComponent, FooterComponent]
     });
     fixture = TestBed.createComponent(AboutUsComponent);
     component = fixture.componentInstance;

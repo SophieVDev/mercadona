@@ -47,23 +47,11 @@ describe('ProduitsComponent', () => {
     fixture.detectChanges();
   
     // Vérifiez si les produits filtrés ont la catégorie "Maison"
-    const produitsFiltreMaison = component.produitsFiltre;
+    const produitsFiltreMaison = component.productsFilter;
     expect(produitsFiltreMaison.length).toBe(1); 
     expect(produitsFiltreMaison[0].categories.id).toBe(1);
   }));
 
-  /*it('should filter products by category "Maison"', fakeAsync (() => {
-    // Appelez la fonction à tester
-    component.afficherProduitsMaison();
-
-    tick();
-    fixture.detectChanges();
-
-    // Vérifiez si les produits filtrés ont la catégorie "Maison"
-    const produitsFiltreMaison = component.produitsFiltre;
-    expect(produitsFiltreMaison.length).toBe(1); // Il ne devrait y avoir qu'un produit dans le filtre
-    expect(produitsFiltreMaison[0].categories.id).toBe(1); // Vérifiez si la catégorie est "Maison"
-  }));*/
 
 
 

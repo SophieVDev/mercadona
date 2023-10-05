@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { HomepageService } from './homepage.service';
 import { Products } from '../produits/modele';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-homepage',
@@ -13,6 +14,8 @@ export class HomepageComponent implements OnInit{
   hasRgpdConsent: boolean = false;
 
   constructor(
+    
+  private httpClient: HttpClient,
     private homepageService: HomepageService,
   ) {}
 

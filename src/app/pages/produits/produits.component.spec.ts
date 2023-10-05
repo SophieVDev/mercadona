@@ -52,7 +52,7 @@ describe('ProduitsComponent', () => {
     expect(produitsFiltreMaison[0].categories.id).toBe(1);
   }));
 
- /* it('should filter products by category "Maison"', fakeAsync (() => {
+  /*it('should filter products by category "Maison"', fakeAsync (() => {
     // Appelez la fonction à tester
     component.afficherProduitsMaison();
 

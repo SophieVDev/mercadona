@@ -16,16 +16,16 @@
             
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
               
-                <div class="col" *ngFor="let product of produitsFiltre">
+                <div class="col" *ngFor="let products of productsFilter">
                 
                   <div class="card shadow-sm">
                     <img type="file" th:src="@{'/' + ${product.imagePath}}" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Image du produit" accept="image/png, image/jpg">
                       <div class="card-body">
-                        <h1 class="card-text">{{ product.nom }}</h1>
-                        <p class="card-text">{{ product.description }}</p>
-                        <h4>Prix : {{ product.prix }} € </h4>
-                        <h4 class="text-danger"style="font-weight: bold;">Prix remisé : {{ product.prix - product.prix * product.promotion / 100 }} €</h4> 
-                        <h6>date limite : {{ product.expirationDate }} </h6>
+                        <h1 class="card-text">{{ products.nom }}</h1>
+                        <p class="card-text">{{ products.description }}</p>
+                        <h4>Prix : {{ products.prix }} € </h4>
+                        <h4 class="text-danger"style="font-weight: bold;">Prix remisé : {{ products.prix - products.prix * products.promotion / 100 }} €</h4> 
+                        <h6>date limite : {{ products.expirationDate }} </h6>
                   </div>
                 </div>
             </div>

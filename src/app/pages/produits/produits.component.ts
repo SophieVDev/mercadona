@@ -12,7 +12,7 @@ import { Products } from './modele';
 export class ProduitsComponent implements OnInit {
 
   products: Products[] = [];
-  produitsFiltre: Products[] = [];
+  productsFilter: Products[] = [];
 
   
 
@@ -22,11 +22,11 @@ export class ProduitsComponent implements OnInit {
     this.fetchData();
   }
 
-  public fetchData() {
+public fetchData() {
     this.productsService.getProducts().subscribe(
       (response) => {
         this.products = response;
-        this.produitsFiltre = this.products;
+        this.productsFilter = this.products;
       },
       (error) => {
         console.error("Erreur lors de la requête de produits :", error);
@@ -37,33 +37,23 @@ export class ProduitsComponent implements OnInit {
   //FILTRE PAR CATEGORIE//
 
   afficherProduitsMaison() {
-    // Filtrer les produits par catégorie "Maison" (ID 1)
-    this.produitsFiltre = this.products.filter(
-      (product) => product.categories.id === 1
-    );
+    this.productsFilter = this.products.filter(products => products.categories && products.categories.id === 1);
   }
 
   afficherProduitsCosmetique() {
-    // Filtrer les produits par catégorie "Cosmetique" (ID 2)
-    this.produitsFiltre = this.products.filter(
-      (product) => product.categories.id === 2
-    );
+    this.productsFilter = this.products.filter(products => products.categories && products.categories.id === 2);
   }
-
+  
   afficherProduitsAliementaire() {
-    // Filtrer les produits par catégorie "Aliementaire" (ID 3)
-    this.produitsFiltre = this.products.filter(
-      (product) => product.categories.id === 3
-    );
+    this.productsFilter = this.products.filter(products => products.categories && products.categories.id === 3);
   }
-
 
   afficherProduits() {
-    // Filtrer les produits par catégories ayant les ID 1, 2 ou 3
-    this.produitsFiltre = this.products.filter(
-      (product) => [1, 2, 3].includes(product.categories.id)
-    );
+    // Affichez tous les produits
+    this.productsFilter = this.products;
   }
+
+
 }
 
 

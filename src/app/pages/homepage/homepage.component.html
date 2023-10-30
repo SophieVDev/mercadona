@@ -20,7 +20,7 @@
               <h1 class="card-text">{{ products.nom }}</h1>
               <p class="card-text">{{ products.description }}</p>
               <h4>Prix : {{ products.prix }} € </h4>
-              <h4 class="text-success">Promotion : {{ products.prix - products.prix * products.promotion / 100 }} €</h4> 
+              <h4 class="text-danger"style="font-weight: bold;">Prix remisé : {{ (products.prix - products.prix * products.promotion / 100).toFixed(2) }} €</h4> 
               <h6>date limite : {{products.expirationDate }} </h6>
             </div>
           </div>
@@ -38,4 +38,6 @@
     </button>
   </div>
 </div>
+
+
 <app-footer></app-footer>

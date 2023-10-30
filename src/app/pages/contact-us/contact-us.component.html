@@ -11,13 +11,13 @@
                                         <form action="https://formsubmit.co/svercoutter@gmail.com" method="POST">
                                             <div class="form-floating mb-3 w-100">
                                                 <input type="text" class="form-control rounded-3" name="name" placeholder="name" required>
-                                                <label for="message">Nom et Prénom :  </label>
+                                                <label for="message">Nom :  </label>
                                             </div>
 
                                             <div class="form-floating mb-3 w-100 ">
                                                 <input type="email" class="form-control rounded-3" name="email" placeholder="Email Adress" required>
                                                 <label for="floatingInput">Email :  </label>
-                                                <input type="hidden" name="_next" value="http://mercadonastudi.s3-website.eu-west-3.amazonaws.com/email-envoye">
+                                                <input type="hidden" name="_next" value="http://mercadonastudi.io.s3-website.eu-west-3.amazonaws.com/email-envoye">
                                                 <input type="hidden" name="_captcha" value="false">
                                             </div>
 
@@ -25,7 +25,7 @@
                                                 <textarea type="text" class="Message form-control rounded-3" name="message" placeholder="text" required></textarea>
                                                 <label for="floatingInput">Message :  </label>
                                             </div>
-                                            <button class=" mb-2 btn btn-lg rounded-3 btn-success" type="submit">Envoyer</button>
+                                            <button class=" mb-2 btn btn-lg rounded-3 btn-success" [routerLink]="['/email-envoye']" type="submit">Envoyer</button>
                                       </form>
                                     </div>
                             </div>

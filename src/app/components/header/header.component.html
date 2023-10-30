@@ -1,24 +1,31 @@
-<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-xl-between py-3 mb-4 border-bottom">
-    <div class="col-xl-3 mb-2 mb-md-0">
-      <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-        <img class="logo" src="assets/images/logo_mercadona.png" alt="logo_mercadona" title="logo de l'entreprise" width="350" height="100">
-      </a>
-    </div>
-    <nav class="navbar col-12 col-xl-auto mb-2 justify-content-center mb-md-0">
-      <div class="menu">
-    <ul class="nav">
-      <li><a [routerLink]="['']" class="nav-link px-2" appCustomRouterLinkActive>Vos promotions</a></li>
-      <li><a [routerLink]="['/produits']" class="nav-link px-2" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">Catalogue</a></li>
-      <li><a [routerLink]="['/nous-connaître']" class="nav-link px-2" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">Nous connaître</a></li>
-      <li><a [routerLink]="['/nous-contacter']" class="nav-link px-2" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">Nous contacter</a></li>
-    </ul>
-  </div>
-    </nav>
-
-    <div class="col-xl-3 ">
-      <a href="http://java-mercadona.eu-west-3.elasticbeanstalk.com/login" class="btn btn-outline me-2" >Se connecter</a>
-    </div>
-  </header>
-
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Hamburger Menu</title>
+      <link rel="stylesheet" href="./header.component.scss">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+  <body>
+      <header>
+      <nav>
+          <ul class='nav-bar'>
+              <li class='logo'><a href='#'><img src="assets/images/logo_mercadona.png"/></a></li>
+              <input type='checkbox' id='check' />
+              <span class="menu">
+                <li><a [routerLink]="['']" class="nav-link px-2" appCustomRouterLinkActive>Vos promotions</a></li>
+                <li><a [routerLink]="['/produits']" class="nav-link px-2" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">Catalogue</a></li>
+                <li><a [routerLink]="['/nous-connaître']" class="nav-link px-2" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">Nous connaître</a></li>
+                <li><a [routerLink]="['/nous-contacter']" class="nav-link px-2" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">Nous contacter</a></li>
+                <li><a href="http://java-mercadona.eu-west-3.elasticbeanstalk.com/login" class="btn btn-outline me-2" >Se connecter</a></li>
+                  <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+              </span>
+              <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+          </ul>
+      </nav>
+      </header>
+  </body>
+  </html>
     <router-outlet></router-outlet>
 

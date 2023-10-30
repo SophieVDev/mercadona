@@ -8,7 +8,7 @@ import { Products } from '../produits/modele';
   providedIn: 'root'
 })
 export class HomepageService {
-  readonly API_URL = "http://localhost:8081/api"; // Assurez-vous que le port est correct
+  readonly API_URL = "http://java-mercadona.eu-west-3.elasticbeanstalk.com/api"; // Assurez-vous que le port est correct
 
   constructor(private httpClient: HttpClient) { }
 

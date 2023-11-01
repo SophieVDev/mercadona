@@ -1,27 +1,90 @@
-# Mercadona
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
+# MERCADONA - Application Web PARTIE FRONT
 
-## Development server
+Bienvenue sur le site de l'application web Mercadona, développée par l'entreprise Promoweb. Notre application vous permet de découvrir les produits en cours, y compris les promotions actuelles, pour vous aider à faire des achats informés et économiques. Cette application est soutenue par une infrastructure solide, avec le back-end écrit en Java grâce à Spring Boot, une base de données PostgreSQL et un Front sous Angular. Pour compiler le projet, nous utilisons l'outil Maven, et le déploiement en ligne est assuré par AWS.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Informations pratiques
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Lien vers le site](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+- [Repository GitHub](https://github.com/SophieVDev/mercadonabdd2023.git)
+- [Manuel d'utilisation](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+- [Documentation technique](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Structure du site
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Le répertoire du projet Mercadona suit la disposition suivante :
 
-## Running end-to-end tests
+![Architecture](../mercadona/src/assets/images/architecture-front.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Technologies Utilisées
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+  dependences: 
+    "@angular/animations": "^16.1.0",
+    "@angular/common": "^16.1.0",
+    "@angular/cli": "~16.1.6",
+    "@angular/compiler-cli": "^16.1.0",
+    "@angular/compiler": "^16.1.0",
+    "@angular/core": "^16.1.0",
+    "@angular/forms": "^16.1.0",
+    "@angular/platform-browser": "^16.1.0",
+    "@angular/platform-browser-dynamic": "^16.1.0",
+    "@angular/router": "^16.1.0",
+    "ngx-cookie-service": "^16.0.1",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.13.0"
+
+  devDependences :
+    "@angular-devkit/build-angular": "^16.1.6",
+    "@angular/cli": "~16.1.6",
+    "@angular/compiler-cli": "^16.1.0",
+    "@types/jasmine": "~4.3.0",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.1.3"
+  }
+
+
+## Comment cloner le code
+
+
+- Côté BACK ==> Cloner le repository : git clone https://github.com/SophieVDev/mercadonabdd2023.git
+- Côté FRONT ==> Cloner le repository : git clone https://github.com/SophieVDev/mercadonabdd2023.git
+
+
+
+
+
+
+## Color Reference
+
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Example Color | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
+| Example Color | ![#fffff](https://via.placeholder.com/10/f8f8f8?text=+) #fffff |
+| Example Color | ![#219e6b](https://via.placeholder.com/10/00b48a?text=+) #219e6b |
+
+
+
+## Déploiment
+
+Pour déployer le projet en local:
+
+```bash
+  ng serve
+```
+
+## Besoin d'Aide ?
+Si vous rencontrez des problèmes ou avez des questions sur l'application, n'hésitez pas à consulter notre documentation technique ou à vous référer au manuel d'utilisation pour obtenir de l'aide.
+
+Merci bien! 🛒
+
+

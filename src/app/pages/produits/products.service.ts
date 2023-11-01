@@ -9,7 +9,7 @@ import { Products } from './modele';
   providedIn: 'root'
 })
 export class ProductsService {
-  readonly API_URL = "http://java-mercadona.eu-west-3.elasticbeanstalk.com/api"; 
+  readonly API_URL = "http://bddjavamercadona-env.eba-rzqy8qvm.eu-central-1.elasticbeanstalk.com/api"; 
 
   constructor(private httpClient: HttpClient) { }
 
